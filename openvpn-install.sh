@@ -1155,17 +1155,14 @@ function newClient() {
 	mkdir /root/opn
 	cp -r /root/client.ovpn /root/opn/client.ovpn
 	var="[Unit]
-	Description=webserv
-
-	[Service]
-	Type=simple
-	WorkingDirectory=/root/opn
-	Restart=always
-	ExecStart=python3 -m http.server 80
-
-	[Install]
-	WantedBy=multi-user.target
-	"
+Description=webserv
+[Service]
+Type=simple
+WorkingDirectory=/root/opn
+Restart=always
+ExecStart=python3 -m http.server 80
+[Install]
+WantedBy=multi-user.target"
 	echo "$var" > "/lib/systemd/system/webserv.service"
 	systemctl daemon-reload
 	systemctl enable webserv.service
