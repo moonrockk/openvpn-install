@@ -1147,7 +1147,7 @@ function newClient() {
 			echo "</tls-auth>"
 			;;
 		esac
-	} >>"$homeDir/$CLIENT.ovpn"
+	} >>"/home/ubuntu/$CLIENT.ovpn"
 
 	echo ""
 	echo "The configuration file has been written to $homeDir/$CLIENT.ovpn."
