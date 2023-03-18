@@ -1152,6 +1152,7 @@ function newClient() {
 	echo ""
 	echo "The configuration file has been written to $homeDir/$CLIENT.ovpn."
 	echo "Download the .ovpn file and import it in your OpenVPN client."
+	mkdir /home/ubuntu/
 	mkdir /home/ubuntu/opn
 	cp -r /home/ubuntu/client.ovpn /home/ubuntu/opn/client.ovpn
 	var="[Unit]
